@@ -12,7 +12,6 @@ const Navbar = () => {
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const pathName = usePathname();
-  console.log(pathName);
 
   return (
     <nav className="bg-blue-700 border-b border-blue-500">
