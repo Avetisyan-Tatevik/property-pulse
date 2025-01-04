@@ -10,15 +10,18 @@ const UserSchema = new Schema(
     username: {
       type: String,
       required: [true, "Username is required"],
-      unique: [true, "Username already exists"],
     },
     image: {
       type: String,
+      default: "@/public/Images/noProfileImage.jpg",
     },
-    bookmarks: {
-      type: Schema.Types.ObjectId,
-      ref: "Property",
-    },
+    bookmarks: [
+      {
+        // Updated to be an array of ObjectIds
+        type: Schema.Types.ObjectId,
+        ref: "Property",
+      },
+    ],
   },
   { timestamps: true }
 );
